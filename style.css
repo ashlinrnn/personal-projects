@@ -1,0 +1,128 @@
+/* 🌸 Ella's Timetable Styles – Pastel Pink, Lilac & Light Blue Theme */
+
+body {
+  font-family: fantasy;
+  background: linear-gradient(135deg, #ffb6c1, #d8b4e2, #a7c7e7); /* pink → lilac → light blue */
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+/* Table container */
+table {
+  width: 90%;
+  max-width: 900px;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); 
+  
+}
+
+/* Table headers */
+th {
+  background: rgba(255, 182, 193, 0.8); /* soft pink */
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px;
+  letter-spacing: 1px;
+}
+
+/* Table data */
+td {
+  background: rgba(255, 255, 255, 0.35);
+  text-align: center;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  transition: transform 0.3s, background 0.3s; 
+  padding: 30px;
+}
+
+td:hover {
+  transform: scale(1.03);
+}
+
+/* Time column */
+.time {
+  background: rgba(167, 199, 231, 0.6); /* light blue */
+  font-weight: 600;
+  color: #333;
+}
+
+/* 🩷 Subject color themes */
+td:contains("Subtraction") {
+  background: rgba(255, 182, 193, 0.6); /* pastel pink */
+}
+
+td:contains("Addition") {
+  background: rgba(216, 180, 226, 0.6); /* lilac */
+}
+
+td:contains("Division") {
+  background: rgba(167, 199, 231, 0.6); /* light blue */
+}
+
+td:contains("Conversion") {
+  background: rgba(255, 192, 203, 0.6); /* rosy pink */
+}
+
+td:contains("Multiplication") {
+  color: #d8b4e2;
+}
+
+td:contains("Reading") {
+  background: rgba(221, 160, 221, 0.6); /* soft lavender */
+}
+
+
+/* 📱 Responsive design */
+@media (max-width: 600px) {
+  table, th, td, tr {
+    display: block;
+  }
+
+  th {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  td::before {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 45%;
+    white-space: nowrap;
+    color: #555;
+    font-weight: 600;
+    content: attr(data-label);
+  }
+} 
+
+h1 { 
+   font-family: cursive;
+    display: flex; 
+    justify-content: center;  
+    color: lightcoral;
+   
+}
